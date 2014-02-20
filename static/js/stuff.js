@@ -1,24 +1,31 @@
-alert('Meow!'); // edit me!
+alert('Surprise!'); // edit me!
 
 // Problem 1 (Say Hello!) ---------------------------------------------------
 $('#say_hello').click(function() {
-  alert('¡Hola, todos!')
+  alert('¡Hola, todos!');
 });
 
 
 // Problem 2 (Houdini) ------------------------------------------------------
 $('#disappear').click(function() {
-  //WRITE CODE HERE
+$('#houdini_text').hide();
 });
 
 $('#reappear').click(function() {
-  //WRITE CODE HERE
+$('#houdini_text').show();
+});
+
+$('#tickle_button').click(function() {
+$('#tickled_text').css('color','Pink');
+});
+
+$('#tickle_buttonstop').click(function() {
+$('#tickled_text').css('color','Black');
+});
+
+$('#greetme').click(function() {
+alert($('#my_name').val());
 });
 
 
-// Problem 3 (Tickle Me Pink) -----------------------------------------------
-// WRITE CODE HERE
 
-
-// Problem 4 (Greet Me) -----------------------------------------------------
-// WRITE CODE HERE
