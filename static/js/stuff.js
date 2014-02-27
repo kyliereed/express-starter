@@ -26,6 +26,3 @@ $('#tickled_text').css('color','Black');
 $('#greetme').click(function() {
 alert($('#my_name').val());
 });
-
-
-
