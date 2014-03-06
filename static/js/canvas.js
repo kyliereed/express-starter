@@ -67,8 +67,4 @@ $(document).ready(function() {
   	for(var i = 0; i < 501; i = i + 5)
   		context.strokeRect(i, 50, 5, 5)
   });
-
-  $('#p11').click(function(){
-  	for
-  })
 });
