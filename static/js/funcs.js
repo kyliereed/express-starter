@@ -26,6 +26,16 @@ $(document).ready(function() {
     drawCircle(x+100, y+100, 50, color);
   }
   // Challenge:
+  var drawTriforce = function(x, y, sideLen, color){
+    context.fillStyle = color;
+    context.beginPath();
+    context.moveTo(x, y);
+    context.lineTo(x+sideLen/2, y+sideLen*(Math.sqrt(3)/2));
+    context.lineTo(x-sideLen/2, y+sideLen*(Math.sqrt(3)/2));
+    context.lineTo(x, y);
+    context.closePath();
+    context.fill();
+  }
   // Write drawTriangle, drawTriforce, drawTripleTriforce,
   // drawSierpinski functions here
 
@@ -68,6 +78,10 @@ $(document).ready(function() {
     drawTriplet(50, 300, 'green');
     drawTriplet(300, 50, 'black');
   });
+
+  $('#p9').click(function(){
+    drawTriforce(100, 100, 35, 'green');
+  })
   //---------------------------------------------------------------------------
   //Write your code for p5-p11 here
   //
