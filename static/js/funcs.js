@@ -20,8 +20,11 @@ $(document).ready(function() {
     context.stroke();
   };
 
-  // Write drawTriplet function here
-
+  var drawTriplet = function(x, y, color) {
+    drawCircle(x+60, y+50, 50, color);
+    drawCircle(x+25, y+100, 50, color);
+    drawCircle(x+100, y+100, 50, color);
+  }
   // Challenge:
   // Write drawTriangle, drawTriforce, drawTripleTriforce,
   // drawSierpinski functions here
@@ -49,6 +52,21 @@ $(document).ready(function() {
     drawCircle(150, 250, 50, 'green');
     drawCircle(150, 200, 50, 'blue');
     drawSquare(100, 150, 100, 'red');
+  });
+
+  $('#p6').click(function(){
+    drawTriplet(100, 100, 'green');
+  });
+
+  $('#p7').click(function(){
+    drawTriplet(100, 100, 'blue');
+  });
+
+  $('#p8').click(function(){
+    drawTriplet(50, 50, 'blue');
+    drawTriplet(300, 300, 'red');
+    drawTriplet(50, 300, 'green');
+    drawTriplet(300, 50, 'black');
   });
   //---------------------------------------------------------------------------
   //Write your code for p5-p11 here
