@@ -21,6 +21,8 @@ $(document).ready(function() {
   // PUT STUFF HERE
 var numBalls = 50;
 
+var reactions = [];
+
 var balls = [];
 
 var colors = ['aqua', 'grey', 'magenta', 'violet', 'lightblue', 'lightcoral', 'turquoise'];
@@ -56,6 +58,10 @@ for (var i = 0; i < numBalls; i++){
   for (var i = 0; i < balls.length; i++){
       drawCircle(balls[i].x, balls[i].y, balls[i].radius, balls[i].color)
     };
+  for (var i = 0; i < reactions.length; i++){
+    drawCircle(reactions[i].x, reactions[i].y, reactions[i].radius,
+      reactions[i].color);
+  } 
           
     setTimeout(updateGame, 10);
     };
@@ -66,11 +72,9 @@ for (var i = 0; i < numBalls; i++){
     var x = e.pageX - $(this).offset().left;
     var y = e.pageY - $(this).offset().top;
     // PUT STUFF HERE
-    var b0 = {
-    radius: Math.random()*10+5, x: x, y: y, 
-    vx: Math.random()*7-3.5, vy: Math.random()*7-3.5, 
-    color: colors[Math.floor(Math.random()*colors.length)]
-};
+    var b0 = {radius: 30, x: x, y: y, vx: 0, vy: 0,
+      color: colors[Math.floor(Math.random()*colors.length)]
+    };
   balls.push(b0)
   });
 
